@@ -1,0 +1,34 @@
+turn =True
+tasks=[]
+while(turn):
+    print("\n 1.Display TODO List")
+    print("2.Add Task")
+    print("3.Mark a task as Completed")
+    print("4.Remove Task")
+    print("5.Quit")
+    choice=int(input("Enter your Choice: "))
+    if choice==1:
+        for i in tasks:
+            print(i)
+    elif choice==2:
+        user_task=input("Enter task to add into list: ")
+        tasks.append(user_task)
+    elif choice==3:
+        complete=input("Enter task name to mark as complete: ")
+        if complete in tasks:
+            print(complete," Task Marked as complete")
+        else:
+            print("Task Not Available Or Task Already Completed")
+    elif choice==4:
+        rem=input("Enter task to remove from TODO List: ")
+        if rem in tasks:
+            tasks.remove(rem)
+            print(rem," Task Removed from TODO List")
+        else:
+            print("Task Not Available Or Task Removed")
+    elif choice==5:
+        turn =False
+    else:
+        print("Enter your choice from 1 to 5")
+
+
